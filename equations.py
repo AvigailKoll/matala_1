@@ -1,6 +1,34 @@
 def result(x):
 	return float('%0.6f' % x)
+
+def atseret(num):
+	if num==0.0:
+		return 1.0
+	if num<0.0:
+		return 0.0
+	t=1.0
+	v=1.0
+	while t<=num:
+		v=v*t
+		t=t+1
+	return v
+
+
+def absolut(y):
+	if y<0.0:
+		y=-y
+	return y
 	
+
+def maarih(num,n):
+	w=1.0
+	exp=1.0
+	while w<=num:
+		exp=exp*n
+		w=w+1
+	return result(exp)
+
+
 def exponent(x):
 	num=1.0
 	exp=1.0
@@ -16,25 +44,6 @@ def exponent(x):
 		return result(exp)
 
 
-def atseret(num):
-	if num==0.0:
-		return 1.0
-	if num<0.0:
-		return 0.0
-	t=1.0
-	v=1.0
-	while t<=num:
-		v=v*t
-		t=t+1
-	return v
-
-def maarih(num,n):
-	w=1.0
-	exp=1.0
-	while w<=num:
-		exp=exp*n
-		w=w+1
-	return result(exp)
 
 def Ln(x):
 	if x<=0.0:
@@ -47,11 +56,6 @@ def Ln(x):
 		Eps=absolut(Y-Ybefore)
 		if Eps<=0.001:
 			return result(Y)
-
-def absolut(y):
-	if y<0.0:
-		y=-y
-	return y
 
 def XtimesY(x,y):
 	if x<=0.0:
